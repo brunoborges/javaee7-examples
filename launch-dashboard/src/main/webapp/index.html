@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+
+<html  xml:lang="en" lang="en">
+
+    <head>
+        <meta charset="UTF-8" />
+        <title>GlassFish Server</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="" />
+        <meta http-equiv="content-language" content="en" />
+        <link href="https://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/css/bootstrap.min.css" rel="stylesheet" />
+        <link href="https://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/css/bootstrap-responsive.min.css" rel="stylesheet" />
+        <link href="./css/docs.css" rel="stylesheet" />
+        <link href="./css/reflow-skin.css" rel="stylesheet" />
+        <link href="./css/lightbox.css" rel="stylesheet" />
+        <link href="./css/site.css" rel="stylesheet" />
+
+        <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+        <!--[if lt IE 9]>
+                <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+
+    </head>
+
+    <body class="page-index project-gfmvnsite" data-spy="scroll" data-offset="60" data-target="#toc-scroll-target">
+
+        <div class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </a>
+                    <div class="brand"><a href="https://glassfish.java.net"><img src="images/gflogo24.png"><span style="color:#E88A43;font-size:18px;padding-left:11px;;padding-top:15px;font-weight:bold;">GlassFish</span> - <span style="font-size:18px;">World's first Java EE 7 Application Server</span></a></div>
+                    <div class="nav-collapse">
+                        <ul class="nav pull-right">
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">About <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="license.html" title="License">Legal </a></li>
+                                    <li><a href="roadmap.html" title="FAQ">Roadmap </a></li>
+                                    <li><a href="contact.html" title="Contact us">Contact us </a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div><!--/.nav-collapse -->
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+
+            <!-- Masthead
+            ================================================== -->
+
+
+            <div class="main-body">
+                <div class="row columns">
+                    <h1 class="span12" style="padding-top: 20px">Java EE 7 Live Coverage</h1>
+                </div>
+
+                <div class="row">
+                    <div class="span8">
+                        <h3><p class="ico-forum">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Chat</p></h3>
+                        <p><textarea id="chatroom" disabled="true">Welcome to Chat Room!
+====================</textarea></p>
+                        <p><input type="text" id="message" alt="What do you want to say?" placeholder="What do you want to say?"/>
+                            <input type="button" id="sendMessage" value="Send"/></p> 
+                        <div class="section"></div>
+                    </div>
+
+                    <div class="span4">
+                        <h3><p class="ico-contribute">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Users</p></h3>
+                        <p><textarea id="users" disabled="true" rows="8"></textarea></p>
+                        <p><a href="signin" id="signin"><img src="images/sign-in-with-twitter-gray.png"/></a>
+                            <a href="signout" style="display:none" id="signout">Sign out</a></p>
+                        <div class="section"></div>
+
+                        <h3><p class="ico-globe" style="white-space:nowrap;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Twitter</p></a></h3>
+                        <p><a class="twitter-timeline" href="https://twitter.com/search?q=%23JavaEE7" data-widget-id="344298348695650305">#JavaEE7</a>
+                            <script>!function(d, s, id) {
+                                    var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https';
+                                    if (!d.getElementById(id)) {
+                                        js = d.createElement(s);
+                                        js.id = id;
+                                        js.src = p + "://platform.twitter.com/widgets.js";
+                                        fjs.parentNode.insertBefore(js, fjs);
+                                    }
+                                }(document, "script", "twitter-wjs");</script>
+                        </p>
+                    </div>
+
+                </div> <!-- 2nd row -->
+
+                <div class="row">  <!-- 3rd row -->
+                    <span class="span12">
+                   <!--     <h3>
+                            <p class="ico-docs">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pictures</p>
+                        </h3> -->
+                        <div class="section" id="pictures">
+                        </div>
+                    </span>
+                </div>
+
+                <div class="row">
+                </div>
+            </div>
+
+        </div><!-- /container -->
+
+        <!-- ze footer
+        ================================================== -->
+        <footer class="well">
+            <div class="container">
+
+                <div class="row-fluid" id="bottom-info">
+                    <!--div class="span6 pagination-centered" id="social"-->
+                    <div class="span4" id="social">			
+                        <a href="http://blogs.oracle.com/theaquarium/"><img src="images/icons/TheAquarium.png"></a>
+                        <a href="https://twitter.com/glassfish"><img src="images/icons/twitter.png"></a>
+                        <a href="https://plus.google.com/communities/106098646151660933759"><img src="images/icons/google.png"></a>
+                        <a href="http://www.linkedin.com/groups/GlassFish-Users-106819/about"><img src="images/icons/linkedin.png"></a>
+                        <a href="http://www.youtube.com/user/GlassFishVideos"><img src="images/icons/youtube.png"></a>
+                        <a href="https://www.facebook.com/GlassFish"><img src="images/icons/facebook.png"></a>
+                        <!--a href="http://blogs.oracle.com/theaquarium/"><img src="images/icons/rss.png"></a-->
+                    </div>
+
+                    <div class="span8" id="copyright">Project sponsored by <img src="images/logo_oracle.png" id="orcl"/><br/>
+                        Copyright &copy; 2013 Oracle Corporation and/or its affiliates. <span class="publishDate"> Last Published: 06-10-2013.</span></div>
+                </div>
+
+
+
+                <div class="row">
+
+
+                </div>
+            </div>
+        </footer>
+
+
+        <!-- ================================================== -->
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+        <!--script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script-->
+        <script type="text/javascript">
+                                if (typeof jQuery == 'undefined')
+                                {
+                                    document.write(unescape("%3Cscript src='./js/jquery-1.8.3.min.js' type='text/javascript'%3E%3C/script%3E"));
+                                }
+        </script>	
+        <script src="https://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/js/bootstrap.min.js"></script>
+        <script src="./js/imagesapp.js"></script>
+        <script src="./js/chatapp.js"></script>
+        <script src="./js/lightbox.js"></script>
+        <script src="./js/jquery.smooth-scroll.min.js"></script>
+        <!-- back button support for smooth scroll -->
+        <script src="./js/jquery.ba-bbq.min.js"></script>
+        <script src="./js/reflow-skin.js"></script>
+        <!--  Begin SiteCatalyst code  -->
+        <script language="JavaScript" src="https://www.java.net/images/s_code_remote.js"></script>
+        <!--  End SiteCatalyst code  -->
+    </body>
+</html>
