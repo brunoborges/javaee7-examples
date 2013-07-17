@@ -40,7 +40,7 @@ public class TwitterImageProcessor {
     public boolean isRunning() {
         return started;
     }
-    
+
     public void start() {
         if (started) {
             return;
@@ -53,7 +53,10 @@ public class TwitterImageProcessor {
         StatusListener listener = new StatusListener() {
             @Override
             public void onStatus(Status status) {
-                // System.out.println(status.getUser().getName() + " : " + status.getText());
+                // Do not accept sensitive (XXX) content
+                if (status.isPossiblySensitive())
+                    return;
+
                 Tweet t = imageExtractor.process(status);
                 statisticsProcessor.gotTweet(t != null);
                 if (t != null) {
@@ -110,8 +113,7 @@ public class TwitterImageProcessor {
         this.hashtag = hashtag;
         start();
     }
-    
+
     public void setOAuthTokens(OAuthTokens oauth) {
-        
     }
 }
