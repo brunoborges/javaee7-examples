@@ -1,6 +1,6 @@
 var index = -1;
 $(window).keydown(function(event) {
-    if (event.which == 27) {
+    if (event.which === 27) {
         // the following seems to fix the symptom but only in case the document has the focus
         // prevents websocket ESC bug
         event.preventDefault();
