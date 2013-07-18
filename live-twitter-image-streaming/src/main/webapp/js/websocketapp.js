@@ -124,15 +124,15 @@ function refreshUptime() {
     var hoursDifference = Math.floor(difference / 1000 / 60 / 60);
     difference -= hoursDifference * 1000 * 60 * 60;
     var minutesDifference = Math.floor(difference / 1000 / 60);
-    difference -= minutesDifference * 1000 * 60
+    difference -= minutesDifference * 1000 * 60;
     var secondsDifference = Math.floor(difference / 1000);
 
     if (hoursDifference < 10)
-        hoursDifference = "0" + hoursDifference
+        hoursDifference = "0" + hoursDifference;
     if (minutesDifference < 10)
-        minutesDifference = "0" + minutesDifference
+        minutesDifference = "0" + minutesDifference;
     if (secondsDifference < 10)
-        secondsDifference = "0" + secondsDifference
+        secondsDifference = "0" + secondsDifference;
 
     $("#uptime").text(daysDifference + "d " + hoursDifference + ":" + minutesDifference + ":" + secondsDifference);
 }
@@ -183,5 +183,5 @@ $(document).ready(function() {
             $(this).text("Pause");
             running = true;
         }
-    })
+    });
 });
