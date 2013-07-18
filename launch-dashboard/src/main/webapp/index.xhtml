@@ -1,6 +1,7 @@
-<!DOCTYPE html>
-
-<html  xml:lang="en" lang="en">
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
 
     <head>
         <meta charset="UTF-8" />
@@ -32,7 +33,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </a>
-                    <div class="brand"><a href="https://glassfish.java.net"><img src="images/gflogo24.png"><span style="color:#E88A43;font-size:18px;padding-left:11px;;padding-top:15px;font-weight:bold;">GlassFish</span> - <span style="font-size:18px;">World's first Java EE 7 Application Server</span></a></div>
+                    <div class="brand"><a href="https://glassfish.java.net"><img src="${facesContext.externalContext.requestContextPath}/images/gflogo24.png"/><span style="color:#E88A43;font-size:18px;padding-left:11px;;padding-top:15px;font-weight:bold;">GlassFish</span> - <span style="font-size:18px;">World's first Java EE 7 Application Server</span></a></div>
                     <div class="nav-collapse">
                         <ul class="nav pull-right">
                             <li class="dropdown">
@@ -50,63 +51,62 @@
         </div>
 
         <div class="container">
-
-            <!-- Masthead
-            ================================================== -->
-
-
+            <!-- Masthead ================================================== -->
             <div class="main-body">
-                <div class="row columns">
-                    <h1 class="span12" style="padding-top: 20px">Java EE 7 Live Coverage</h1>
-                </div>
-
-                <div class="row">
-                    <div class="span8">
-                        <h3><p class="ico-forum">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Chat</p></h3>
-                        <p><textarea id="chatroom" disabled="true">Welcome to Chat Room!
-====================</textarea></p>
-                        <p><input type="text" id="message" alt="What do you want to say?" placeholder="What do you want to say?"/>
-                            <input type="button" id="sendMessage" value="Send"/></p> 
-                        <div class="section"></div>
-                    </div>
-
-                    <div class="span4">
-                        <h3><p class="ico-contribute">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Users</p></h3>
-                        <p><textarea id="users" disabled="true" rows="8"></textarea></p>
-                        <p><a href="signin" id="signin"><img src="images/sign-in-with-twitter-gray.png"/></a>
-                            <a href="signout" style="display:none" id="signout">Sign out</a></p>
-                        <div class="section"></div>
-
-                        <h3><p class="ico-globe" style="white-space:nowrap;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Twitter</p></a></h3>
-                        <p><a class="twitter-timeline" href="https://twitter.com/search?q=%23JavaEE7" data-widget-id="344298348695650305">#JavaEE7</a>
-                            <script>!function(d, s, id) {
-                                    var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https';
-                                    if (!d.getElementById(id)) {
-                                        js = d.createElement(s);
-                                        js.id = id;
-                                        js.src = p + "://platform.twitter.com/widgets.js";
-                                        fjs.parentNode.insertBefore(js, fjs);
-                                    }
-                                }(document, "script", "twitter-wjs");</script>
-                        </p>
-                    </div>
-
-                </div> <!-- 2nd row -->
-
-                <div class="row">  <!-- 3rd row -->
-                    <span class="span12">
-                   <!--     <h3>
-                            <p class="ico-docs">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pictures</p>
-                        </h3> -->
-                        <div class="section" id="pictures">
+                <ui:composition template="WEB-INF/template.xhtml">
+                    <ui:define name="content">
+                        <div class="row columns">
+                            <h1 class="span12" style="padding-top: 20px">Java EE 7 Live Coverage</h1>
                         </div>
-                    </span>
-                </div>
 
-                <div class="row">
-                </div>
+                        <div class="row">
+                            <div class="span8">
+                                <h3><p class="ico-forum">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Chat</p></h3>
+                                <p><textarea id="chatroom" disabled="true">Welcome to Chat Room!
+====================</textarea></p>
+                                <p><input type="text" id="message" alt="What do you want to say?" placeholder="What do you want to say?"/>
+                                    <input type="button" id="sendMessage" value="Send"/></p> 
+                                <div class="section"></div>
+                            </div>
+
+                            <div class="span4">
+                                <h3><p class="ico-contribute">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Users</p></h3>
+                                <p><textarea id="users" disabled="true" rows="8"></textarea></p>
+                                <p><a href="signin" id="signin"><img src="images/sign-in-with-twitter-gray.png"/></a>
+                                    <a href="signout" style="display:none" id="signout">Sign out</a></p>
+                                <div class="section"></div>
+
+                                <h3><p class="ico-globe" style="white-space:nowrap;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Twitter</p></h3>
+                                <p><a class="twitter-timeline" href="https://twitter.com/search?q=%23JavaEE7" data-widget-id="344298348695650305">#JavaEE7</a>
+                                    <script>!function(d, s, id) {
+                                            var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https';
+                                            if (!d.getElementById(id)) {
+                                                js = d.createElement(s);
+                                                js.id = id;
+                                                js.src = p + "://platform.twitter.com/widgets.js";
+                                                fjs.parentNode.insertBefore(js, fjs);
+                                            }
+                                        }(document, "script", "twitter-wjs");</script>
+                                </p>
+                            </div>
+
+                        </div> <!-- 2nd row -->
+
+                        <div class="row">  <!-- 3rd row -->
+                            <span class="span12">
+                                <!--     <h3>
+                                         <p class="ico-docs">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pictures</p>
+                                     </h3> -->
+                                <div class="section" id="pictures">
+                                </div>
+                            </span>
+                        </div>
+
+                        <div class="row">
+                        </div>
+                    </ui:define>
+                </ui:composition>
             </div>
-
         </div><!-- /container -->
 
         <!-- ze footer
@@ -117,12 +117,12 @@
                 <div class="row-fluid" id="bottom-info">
                     <!--div class="span6 pagination-centered" id="social"-->
                     <div class="span4" id="social">			
-                        <a href="http://blogs.oracle.com/theaquarium/"><img src="images/icons/TheAquarium.png"></a>
-                        <a href="https://twitter.com/glassfish"><img src="images/icons/twitter.png"></a>
-                        <a href="https://plus.google.com/communities/106098646151660933759"><img src="images/icons/google.png"></a>
-                        <a href="http://www.linkedin.com/groups/GlassFish-Users-106819/about"><img src="images/icons/linkedin.png"></a>
-                        <a href="http://www.youtube.com/user/GlassFishVideos"><img src="images/icons/youtube.png"></a>
-                        <a href="https://www.facebook.com/GlassFish"><img src="images/icons/facebook.png"></a>
+                        <a href="http://blogs.oracle.com/theaquarium/"><img src="images/icons/TheAquarium.png"/></a>
+                        <a href="https://twitter.com/glassfish"><img src="images/icons/twitter.png"/></a>
+                        <a href="https://plus.google.com/communities/106098646151660933759"><img src="images/icons/google.png"/></a>
+                        <a href="http://www.linkedin.com/groups/GlassFish-Users-106819/about"><img src="images/icons/linkedin.png"/></a>
+                        <a href="http://www.youtube.com/user/GlassFishVideos"><img src="images/icons/youtube.png"/></a>
+                        <a href="https://www.facebook.com/GlassFish"><img src="images/icons/facebook.png"/></a>
                         <!--a href="http://blogs.oracle.com/theaquarium/"><img src="images/icons/rss.png"></a-->
                     </div>
 
