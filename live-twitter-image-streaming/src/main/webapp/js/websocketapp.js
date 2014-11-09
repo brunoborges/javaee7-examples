@@ -9,7 +9,7 @@ $(window).keydown(function(event) {
 
 function updateImage(tweet) {
     var localIndex = 0;
-    if (index >= 11) {
+    if (index >= 24) {
         index = 0;
     } else {
         index++;
@@ -142,8 +142,8 @@ function refreshUptime() {
  */
 $(document).ready(setupGallery);
 
-var rows = 3;
-var cols = 4;
+var rows = 5;
+var cols = 5;
 var cells = cols * rows;
 
 function setupGallery() {
